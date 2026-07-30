@@ -1,0 +1,8 @@
+pin= 73097
+while True:
+    a = int(input("enter you pin:-"))
+    if(pin==a):
+        print("welcome")
+        break
+    else:
+        print("try again")
