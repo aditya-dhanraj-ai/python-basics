@@ -1,0 +1,7 @@
+def stud_marksheet(sub1,sub2,sub3):
+  total_mark=sub1+sub2+sub3
+  percent_stud= total_mark/3
+
+  print(total_mark)
+  print(percent_stud)
+stud_marksheet(92,89,93)  # made by me aditya dhanraj i am beginner .
