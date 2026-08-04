@@ -1,0 +1,19 @@
+t_username="Pradipto Chatterjee"
+t_password="pradipto1010"
+s_username="Aditya Dhanraj"
+s_password="aditya"
+uuser_name=input("enter the valid username:-")
+upass_word=input("enter the valid password:-")
+
+if uuser_name==t_username and upass_word==t_password:
+  print("welcome teacher")
+  s_attendence = input("edit the attendance:- ")
+  print("attendence change ho gayi")
+elif uuser_name==s_username and upass_word==s_password:
+
+  print(" welcome student")
+
+  print("Aditya, your attendance is:", s_attendence, "%")
+
+else:
+  print("invalid username or password ")
