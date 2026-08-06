@@ -1,0 +1,5 @@
+for i in range (1,6):   #iss loop me hamesh (1,6) pahle wahi value choti honi chahiye
+  for j in range(i):         #agar hum dono barabar ya aage wali value jada rakhenge 2nd value se to code run nhi hoga
+
+    print("*",end="")
+  print()
