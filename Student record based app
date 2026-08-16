@@ -1,0 +1,71 @@
+#ab console base app for mange student records
+import os
+
+print("student records ")
+print("1. Login as Teacher")
+print("2. Login as Student")
+choose = input("choose any one ")
+kaun_ho = ""
+
+if choose == "1":
+  teacher_gmail = input(" enter your gamil:-")
+  teacher_pass = input("gamil ka password batao yaar :-")
+  if teacher_gmail == "pradiptochatterjee@gmail" and teacher_pass == "100":
+    print("welcome sir")
+    kaun_ho = "teacher"
+  else:
+    print("wrong email or password")
+    exit()
+
+elif choose == "2":
+  print()
+  student_gmail = input(" enter your gamil:-")
+  student_pass = input("gamil ka password batao yaar :-")
+  if student_gmail == "adi@gmail" and student_pass == "1000":
+    print("welcome bro")
+    kaun_ho = "student"
+  else:
+    print("wrong email or password")
+    exit()
+
+while True :
+
+  print("\n1. Add Data karo")
+  print("2. modify data")
+  print("3. display data")
+  print("4. update data")
+  print("5. delete data")
+  print("6. exit data")
+  choice = input("enter your choice : - ")
+
+  if choice == "1":
+    if kaun_ho == "student":
+      print("student is not allowd to add or modify data etc.")
+    else:
+      name = input("enter your name : - ")
+      rollno = eval(input("enter your roll no  : - "))
+      marks = eval(input("enter your mark  : - "))
+      file = open("student_records.txt", "a")
+      res = "name : " + str(name) + "\trollno : " + str(rollno) + "\tmarks : " + str(marks) + "\n"
+      print("\n⠀Data added ")
+      file.write(res)
+      file.close()
+
+  elif choice == "2" or choice == "4":
+    if kaun_ho == "student":
+      print("student is not allowd to add or modify data etc.")
+    else:
+      print("\n--- Modify/Update Mode ---")
+      search_roll = input("Enter roll no to modify: ")
+  elif choice == "3":
+    if kaun_ho == "student":
+      print("student aur teacher dono dekh sakte hai ")
+    else:
+      print("\nDisplay Mode ")
+      print(" all data sab kuch ho chuka hai ")
+  elif choice == "5":
+    if kaun_ho == "student":
+      print("student data delete nhi kar sakta  ")
+    else:
+      print("\n Delete Mode")
+      search_roll = input("Enter roll no to delete: ")
